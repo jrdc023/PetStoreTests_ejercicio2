@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"com\/petstore\/tests\/petstore[1:4]","start":1739776993490,"end":1739776994665,"title":"com\/petstore\/tests\/petstore[1:4] 02:23:13.490-02:23:14.665 Crear un usuario"},{"id":2,"group":1,"content":"com\/petstore\/tests\/petstore[2:12]","start":1739776994678,"end":1739776995023,"title":"com\/petstore\/tests\/petstore[2:12] 02:23:14.678-02:23:15.023 Buscar el usuario creado"},{"id":3,"group":1,"content":"com\/petstore\/tests\/petstore[3:20]","start":1739776995031,"end":1739776995373,"title":"com\/petstore\/tests\/petstore[3:20] 02:23:15.031-02:23:15.373 Actualizar el nombre y correo del usuario"},{"id":4,"group":1,"content":"com\/petstore\/tests\/petstore[4:28]","start":1739776995380,"end":1739776995715,"title":"com\/petstore\/tests\/petstore[4:28] 02:23:15.380-02:23:15.715 Buscar el usuario actualizado"},{"id":5,"group":1,"content":"com\/petstore\/tests\/petstore[5:35]","start":1739776995723,"end":1739776996062,"title":"com\/petstore\/tests\/petstore[5:35] 02:23:15.723-02:23:16.062 Eliminar el usuario"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
