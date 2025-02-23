@@ -16,7 +16,7 @@ Para ejecutar este proyecto en tu máquina local, asegúrate de tener lo siguien
 ## Instalación
 
 1. Clona este repositorio a tu máquina local:
-   git clone https://github.com/TuUsuario/PetStoreTests.git
+   git clone https://github.com/jrdc023/PetStoreTests.git
 
 2. Navega al directorio del proyecto:
    cd PetStoreTests
